@@ -5,7 +5,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
-key_slide = keyboard_check_pressed(vk_control);
+key_slide = keyboard_check_pressed(vk_down);
 
 //Calc movoment horiz
 walljumpdelay = max(walljumpdelay-1,0);

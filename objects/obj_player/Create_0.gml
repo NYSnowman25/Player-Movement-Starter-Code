@@ -1,4 +1,4 @@
-/// @description Establish key vars
+/// @description Establish Key Variables
 
 hsp = 0;
 hsp_wjump = 9;
