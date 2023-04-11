@@ -1,3 +1,3 @@
 /// @description Move Fireball
 
-x -= 10;
+x += x_speed;
