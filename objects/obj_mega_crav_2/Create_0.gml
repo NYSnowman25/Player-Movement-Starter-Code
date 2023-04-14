@@ -1,5 +1,7 @@
 /// @description Establish Key Variables
 
-hsp = 0;
+move = 1;
+change_side_tick = true;
+
 vsp = 0;
-grv = 0.3
+grv = 0.05
