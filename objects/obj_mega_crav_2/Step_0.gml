@@ -2,6 +2,7 @@
 
 vsp += grv;
 
+//Chase Player
 if (place_meeting(x, y + 1, obj_wall)) {
 	if (obj_player.x > x) {
 		hsp = 2;
@@ -33,3 +34,26 @@ if (place_meeting(x, y + vsp, obj_wall)) {
 }
 
 y += vsp
+
+//Attacks
+if (!attack_1) and (!attack_2) and (!attack_3) {
+	image_index = 0;
+} if (attack_1) {
+	image_index = 1;
+	if (!attacking) {
+		alarm[1] = room_speed * 2;
+		attacking = true;
+	}
+}
+
+if (distance_to_object(obj_player) <= 20) {
+	if (!attacking) {
+		attack_1 = true;
+	}
+}
+
+
+
+
+
+
