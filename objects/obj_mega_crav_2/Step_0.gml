@@ -8,7 +8,7 @@ if (place_meeting(x, y + 1, obj_wall)) {
 		hsp = 2;
 	} if (obj_player.x < x) {
 		hsp = -2;
-	} if (distance_to_object(obj_player) <= 20) {
+	} if (distance_to_object(obj_player) <= 5) {
 		hsp = 0;
 	}
 } else {
@@ -39,14 +39,16 @@ y += vsp
 if (!attack_1) and (!attack_2) and (!attack_3) {
 	image_index = 0;
 } if (attack_1) {
-	image_index = 1;
+//	image_index = 1;
+	show_debug_message(attacking);
 	if (!attacking) {
-		alarm[1] = room_speed * 2;
+		image_index = 1;
+		alarm[1] = room_speed * 0.5;
 		attacking = true;
 	}
 }
 
-if (distance_to_object(obj_player) <= 20) {
+if (distance_to_object(obj_player) <= 5) {
 	if (!attacking) {
 		attack_1 = true;
 	}

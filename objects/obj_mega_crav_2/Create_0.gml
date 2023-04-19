@@ -9,3 +9,5 @@ attack_1 = false;
 attack_2 = false;
 attack_3 = false;
 attacking = false;
+
+boss_hp = 100;
