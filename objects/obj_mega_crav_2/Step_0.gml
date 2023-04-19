@@ -8,7 +8,7 @@ if (place_meeting(x, y + 1, obj_wall)) {
 		hsp = 2;
 	} if (obj_player.x < x) {
 		hsp = -2;
-	} if (distance_to_object(obj_player) <= 5) {
+	} if (distance_to_object(obj_player) = 0) {
 		hsp = 0;
 	}
 } else {
@@ -48,7 +48,7 @@ if (!attack_1) and (!attack_2) and (!attack_3) {
 	}
 }
 
-if (distance_to_object(obj_player) <= 5) {
+if (distance_to_object(obj_player) <= 0) {
 	if (!attacking) {
 		attack_1 = true;
 	}

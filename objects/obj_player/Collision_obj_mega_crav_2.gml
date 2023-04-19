@@ -8,5 +8,9 @@ if (mask_index == spr_player_slide) {
 }
 
 if (obj_mega_crav_2.attack_1) and (obj_mega_crav_2.image_index == 2) {
-	global.player_hp -= 1;
+	if (!slam) {
+		global.player_hp -= 1;
+		slam = true;
+		alarm[9] = room_speed;
+	}
 }
