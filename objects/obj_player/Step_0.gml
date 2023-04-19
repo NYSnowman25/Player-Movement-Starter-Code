@@ -163,4 +163,9 @@ if(hsp != 0) {
 	image_xscale = sign(hsp);
 }
 
+//Reset Boss Kick
+if (mask_index != spr_player_slide) {
+	strike_boss = false;
+}
+
 //debug area

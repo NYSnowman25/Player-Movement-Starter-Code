@@ -36,3 +36,5 @@ slidestuck = false;
 
 disable = false;
 normal_color = image_blend;
+
+strike_boss = false;
