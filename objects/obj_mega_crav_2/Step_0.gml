@@ -50,11 +50,19 @@ if (!attack_1) and (!attack_2) and (!attack_3) {
 
 if (distance_to_object(obj_player) <= 0) {
 	if (!attacking) {
+		if (obj_player.x > x) {
+			x += 2;
+		} if (obj_player.x < x) {
+			x -= 2;
+		}
 		attack_1 = true;
 	}
 }
 
-
+if (distance_to_object(obj_player) >= 120) and (obj_player.y - 50 <= y) {
+	hsp = 0;
+	vsp = -1;
+}
 
 
 
