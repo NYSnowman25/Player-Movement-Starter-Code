@@ -39,12 +39,36 @@ y += vsp
 if (!attack_1) and (!attack_2) and (!attack_3) {
 	image_index = 0;
 } if (attack_1) {
-//	image_index = 1;
-	show_debug_message(attacking);
 	if (!attacking) {
 		image_index = 1;
 		alarm[1] = room_speed * 0.5;
 		attacking = true;
+	}
+} if (attack_2) {
+	if (!attacking) {
+		instance_create_layer(x, y, "Instances", obj_fireball_boss);
+		alarm[10] = room_speed * 0.5;
+		attacking = true;
+	}
+} if (attack_3) {
+	if (!attacking) {
+		vsp = -20;
+		if (leap) {
+			if (x < obj_player.x) {
+				hsp = 10;
+			} if (x > obj_player.x) {
+				hsp = -10;
+			} if (x == obj_player.x) {
+				hsp = 0;
+				if (vsp < 5) {
+					vsp = 5;
+				}
+				leap = false;
+				attacking = true;
+			}
+		}
+		alarm[10] = room_speed * 0.5;
+//		attacking = true;
 	}
 }
 
@@ -57,11 +81,10 @@ if (distance_to_object(obj_player) <= 0) {
 		}
 		attack_1 = true;
 	}
-}
-
-if (distance_to_object(obj_player) >= 120) and (obj_player.y - 50 <= y) {
-	hsp = 0;
-	vsp = -1;
+} if (distance_to_object(obj_player) >= 120) and (obj_player.y - 50 <= y) {
+	attack_2 = true;
+} if (distance_to_object(obj_player) >= 200) {
+	attack_3 = true;
 }
 
 

@@ -9,3 +9,4 @@ attack_1 = false;
 attack_2 = false;
 attack_3 = false;
 attacking = false;
+leap = false;
