@@ -8,5 +8,8 @@ image_speed = 0;
 attack_1 = false;
 attack_2 = false;
 attack_3 = false;
+
 attacking = false;
+firing = false;
+
 leap = false;

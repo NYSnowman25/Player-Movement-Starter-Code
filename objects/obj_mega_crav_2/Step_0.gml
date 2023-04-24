@@ -12,7 +12,9 @@ if (place_meeting(x, y + 1, obj_wall)) {
 		hsp = 0;
 	}
 } else {
-	hsp = 0;
+	if (!leap) {
+		hsp = 0;
+	}
 }
 
 
@@ -45,30 +47,31 @@ if (!attack_1) and (!attack_2) and (!attack_3) {
 		attacking = true;
 	}
 } if (attack_2) {
-	if (!attacking) {
+	if (!firing) {
 		instance_create_layer(x, y, "Instances", obj_fireball_boss);
 		alarm[10] = room_speed * 0.5;
-		attacking = true;
+		firing = true;
 	}
 } if (attack_3) {
 	if (!attacking) {
-		vsp = -20;
+		vsp = -10;
 		if (leap) {
 			if (x < obj_player.x) {
 				hsp = 10;
 			} if (x > obj_player.x) {
 				hsp = -10;
-			} if (x == obj_player.x) {
+			}
+/*			} if (x == obj_player.x) {
 				hsp = 0;
 				if (vsp < 5) {
 					vsp = 5;
 				}
 				leap = false;
 				attacking = true;
-			}
+			}*/
 		}
-		alarm[10] = room_speed * 0.5;
-//		attacking = true;
+		alarm[10] = room_speed * 2;
+		attacking = true;
 	}
 }
 
