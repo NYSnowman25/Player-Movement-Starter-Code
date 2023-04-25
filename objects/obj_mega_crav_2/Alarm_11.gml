@@ -5,3 +5,5 @@
 //}
 firing = false;
 leap = false;
+attacking = false;
+firing = false;
