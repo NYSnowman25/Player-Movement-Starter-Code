@@ -1,3 +1,7 @@
 /// @description Begin New Attack
 
-attacking = false;
+//if (place_meeting(x, y + 1, obj_wall)) {
+	attacking = false;
+//}
+firing = false;
+leap = false;

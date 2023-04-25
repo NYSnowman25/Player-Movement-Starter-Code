@@ -3,17 +3,23 @@
 vsp += grv;
 
 //Chase Player
-if (place_meeting(x, y + 1, obj_wall)) {
+//if (place_meeting(x, y + 1, obj_wall)) {
 	if (obj_player.x > x) {
-		hsp = 2;
+		if (leap) {
+			hsp = 10;
+		} else {
+			hsp = 2;
+		}
 	} if (obj_player.x < x) {
 		hsp = -2;
 	} if (distance_to_object(obj_player) = 0) {
 		hsp = 0;
 	}
-} else {
-	hsp = 0;
-}
+//} else {
+//	if (leap) {
+//		hsp = 0;
+//	}
+//}
 
 
 //Horizontal collision
@@ -45,29 +51,30 @@ if (!attack_1) and (!attack_2) and (!attack_3) {
 		attacking = true;
 	}
 } if (attack_2) {
-	if (!attacking) {
+	if (!firing) {
 		instance_create_layer(x, y, "Instances", obj_fireball_boss);
 		alarm[10] = room_speed * 0.5;
-		attacking = true;
+		firing = true;
 	}
 } if (attack_3) {
-	if (!attacking) {
-		vsp = -20;
-		if (leap) {
-			if (x < obj_player.x) {
+	if (!leap) and (!attacking) {
+		vsp = -2;
+		if (!attacking) {
+/*			if (x < obj_player.x) {
 				hsp = 10;
 			} if (x > obj_player.x) {
-				hsp = -10;
-			} if (x == obj_player.x) {
+*/		//		hsp = -10;
+			 if (x >= (obj_player.x - 5)) and (x <= (obj_player.x + 5)) {
 				hsp = 0;
-				if (vsp < 5) {
-					vsp = 5;
+				if (vsp <= 10) {
+					vsp = 10;
 				}
-				leap = false;
-				attacking = true;
+		//		leap = false;
+				leap = true;
+				alarm[10] = room_speed * 0.5;
 			}
 		}
-		alarm[10] = room_speed * 0.5;
+//		alarm[10] = room_speed * 0.5;
 //		attacking = true;
 	}
 }
@@ -84,6 +91,7 @@ if (distance_to_object(obj_player) <= 0) {
 } if (distance_to_object(obj_player) >= 120) and (obj_player.y - 50 <= y) {
 	attack_2 = true;
 } if (distance_to_object(obj_player) >= 200) {
+	show_debug_message("jumping");
 	attack_3 = true;
 }
 
