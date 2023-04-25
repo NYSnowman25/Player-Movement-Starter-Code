@@ -1,4 +1,4 @@
-/// @description Set Game Variables
+/// @description Set Healths
 
 global.boss_hp = 100;
-global.player_hp = 5;
+global.player_hp = 10;

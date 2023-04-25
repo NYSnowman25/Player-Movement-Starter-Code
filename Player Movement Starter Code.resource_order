@@ -2,6 +2,7 @@
   "FolderOrderSettings": [
     {"name":"enemy","order":11,"path":"folders/Sprites/enemy.yy",},
     {"name":"player","order":10,"path":"folders/Sprites/player.yy",},
+    {"name":"Boss","order":7,"path":"folders/Sprites/enemy/Boss.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_enemy_run","order":1,"path":"sprites/spr_enemy_run/spr_enemy_run.yy",},
@@ -9,15 +10,15 @@
     {"name":"spr_player_wall","order":5,"path":"sprites/spr_player_wall/spr_player_wall.yy",},
     {"name":"spr_enemy_fire","order":3,"path":"sprites/spr_enemy_fire/spr_enemy_fire.yy",},
     {"name":"obj_fireball_boss","order":10,"path":"objects/obj_fireball_boss/obj_fireball_boss.yy",},
-    {"name":"spr_fireball_boss","order":6,"path":"sprites/spr_fireball_boss/spr_fireball_boss.yy",},
+    {"name":"spr_fireball_boss","order":1,"path":"sprites/spr_fireball_boss/spr_fireball_boss.yy",},
     {"name":"obj_fireball","order":5,"path":"objects/obj_fireball/obj_fireball.yy",},
     {"name":"spr_player_slide","order":4,"path":"sprites/spr_player_slide/spr_player_slide.yy",},
-    {"name":"spr_mega_crav_2","order":12,"path":"sprites/spr_mega_crav_2/spr_mega_crav_2.yy",},
     {"name":"spr_player_fall","order":1,"path":"sprites/spr_player_fall/spr_player_fall.yy",},
     {"name":"obj_control","order":3,"path":"objects/obj_control/obj_control.yy",},
     {"name":"spr_fireball","order":4,"path":"sprites/spr_fireball/spr_fireball.yy",},
     {"name":"spr_watchtower","order":5,"path":"sprites/spr_watchtower/spr_watchtower.yy",},
     {"name":"spr_enemy_jump","order":2,"path":"sprites/spr_enemy_jump/spr_enemy_jump.yy",},
+    {"name":"obj_trap","order":11,"path":"objects/obj_trap/obj_trap.yy",},
     {"name":"obj_mega_crav_2","order":6,"path":"objects/obj_mega_crav_2/obj_mega_crav_2.yy",},
     {"name":"spr_tiles","order":3,"path":"sprites/spr_tiles/spr_tiles.yy",},
     {"name":"spr_player_jump","order":2,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
@@ -26,5 +27,6 @@
     {"name":"obj_enemy","order":2,"path":"objects/obj_enemy/obj_enemy.yy",},
     {"name":"ts_tiles","order":4,"path":"tilesets/ts_tiles/ts_tiles.yy",},
     {"name":"spr_player_run","order":3,"path":"sprites/spr_player_run/spr_player_run.yy",},
+    {"name":"spr_trap","order":2,"path":"sprites/spr_trap/spr_trap.yy",},
   ],
 }

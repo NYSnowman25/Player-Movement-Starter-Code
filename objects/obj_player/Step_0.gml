@@ -1,4 +1,4 @@
-/// @description Core Player Lgoic
+/// @description Core Player Logic
 
 //Get player inputs
 

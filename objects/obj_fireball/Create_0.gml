@@ -1,4 +1,4 @@
-/// @description Establish Key Variables
+/// @description Establish Direction
 
 if (obj_player.x > obj_watchtower.x) {
 	x_speed = 5;

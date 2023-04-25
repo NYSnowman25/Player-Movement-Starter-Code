@@ -1,4 +1,4 @@
-/// @description Restart
+/// @description Damage Player
 
 instance_destroy(other);
 
